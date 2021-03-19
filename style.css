@@ -59,10 +59,15 @@ nav .logo {
 .btn {
   border-radius: 25px;
   padding: 0.4rem 32px;
+  display: inline-block;
 }
 
 .large-padding {
   padding: 5rem 0;
+}
+
+.standard-padding {
+  padding: 1rem 0;
 }
 
 .flex-content {
@@ -150,5 +155,35 @@ nav .logo {
   opacity: 0.60;
   bottom: -20rem;
   left: 0;
+}
+
+.input-group {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #464646;
+  max-width: 450px;
+  color: #fff;
+}
+
+.input-group input:focus {
+  outline: none;
+  caret-color: #fff;
+}
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #1b1c1e;
 }
 /*# sourceMappingURL=style.css.map */

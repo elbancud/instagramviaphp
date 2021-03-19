@@ -54,12 +54,49 @@
         </div>
     </section>
     <section class="dark large-padding">
-        <div class="container light-color">
-            <h2> Registration</h2>
+        <div class="container light-color ">
+            <div class="content-container">
+                <div class="standard-padding">
+                    <h2> Registration</h2>
+                </div>
+                <div class="input-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" name="firstName" id="firstName" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" name="middleName" id="middleName" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="middleName">Last Name</label>
+                    <input type="text" name="middleName" id="lastName" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off">
+                </div>
 
+                <div class="btn light ">
+                    Submit
+                </div>
+
+
+            </div>
         </div>
-
     </section>
+    <footer>
+        <div class="container light-font">
+            copyright@Tolentino,Esteban,Bancud-2021
+        </div>
+    </footer>
 </body>
 
 </html>
