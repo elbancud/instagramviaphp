@@ -30,16 +30,21 @@
                 </div>
             </div>
         </nav>
-
+        <div class="box dark"></div>
     </header>
-    <section>
+    <main>
+        <section class="right-grid">
 
-        <div class="geometric-design">
-            <div class="container">
-                <div class="content-container">
-                    <h1>Let's Start shall we?</h1>
+            <div class="geometric-design">
+                <div class="container">
+                    <div class="content-container">
+                        <h1>Let's Start shall we?</h1>
+                    </div>
+
+
+
+
                 </div>
-
                 <div class="circle small  dark"> </div>
                 <div class="circle tiny  dark"> </div>
                 <div class="circle large opacity10 dark"></div>
@@ -47,56 +52,53 @@
                 <div class="circle large opacity50 dark"></div>
                 <div class="circle large opacity60 dark"></div>
 
-
-
             </div>
+        </section>
+        <section class="right-grid dark large-padding">
+            <div class="container light-color small-container-right-align">
+                <div class="content-container">
+                    <div class="standard-padding">
+                        <h2> Registration</h2>
+                    </div>
+                    <div class="input-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" name="firstName" id="firstName" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" name="middleName" id="middleName" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="middleName">Last Name</label>
+                        <input type="text" name="middleName" id="lastName" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off">
+                    </div>
 
-        </div>
-    </section>
-    <section class="dark large-padding">
-        <div class="container light-color ">
-            <div class="content-container">
-                <div class="standard-padding">
-                    <h2> Registration</h2>
-                </div>
-                <div class="input-group">
-                    <label for="firstName">First name</label>
-                    <input type="text" name="firstName" id="firstName" autocomplete="off">
-                </div>
-                <div class="input-group">
-                    <label for="middleName">Middle Name</label>
-                    <input type="text" name="middleName" id="middleName" autocomplete="off">
-                </div>
-                <div class="input-group">
-                    <label for="middleName">Last Name</label>
-                    <input type="text" name="middleName" id="lastName" autocomplete="off">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off">
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off">
-                </div>
-                <div class="input-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off">
-                </div>
-
-                <div class="btn light ">
-                    Submit
-                </div>
+                    <div class="btn light ">
+                        Submit
+                    </div>
 
 
+                </div>
             </div>
-        </div>
-    </section>
-    <footer>
+        </section>
+    </main>
+    <!-- <footer>
         <div class="container light-font">
             copyright@Tolentino,Esteban,Bancud-2021
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>

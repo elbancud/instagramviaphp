@@ -26,19 +26,19 @@
 
 h1 {
   max-width: 450px;
-  font: 800 72px/1 'Manrope', sans-serif;
+  font: 800 72px/1 "Manrope", sans-serif;
 }
 
 h2 {
-  font: 800 30px/1 'Manrope', sans-serif;
+  font: 800 30px/1 "Manrope", sans-serif;
 }
 
 h3 {
-  font: 400 16px/1 'Manrope', sans-serif;
+  font: 400 16px/1 "Manrope", sans-serif;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 nav {
@@ -60,6 +60,7 @@ nav .logo {
   border-radius: 25px;
   padding: 0.4rem 32px;
   display: inline-block;
+  font-weight: 800;
 }
 
 .large-padding {
@@ -130,7 +131,7 @@ nav .logo {
 }
 
 .geometric-design .opacity10 {
-  opacity: 0.10;
+  opacity: 0.1;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -138,7 +139,7 @@ nav .logo {
 }
 
 .geometric-design .opacity30 {
-  opacity: 0.30;
+  opacity: 0.3;
   bottom: -15rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -146,13 +147,13 @@ nav .logo {
 }
 
 .geometric-design .opacity50 {
-  opacity: 0.50;
+  opacity: 0.5;
   bottom: -20rem;
   right: 0;
 }
 
 .geometric-design .opacity60 {
-  opacity: 0.60;
+  opacity: 0.6;
   bottom: -20rem;
   left: 0;
 }
@@ -181,9 +182,46 @@ nav .logo {
   caret-color: #fff;
 }
 
+.left-grid {
+  width: 100%;
+  grid-area: left-grid;
+}
+
+.right-grid {
+  width: 100%;
+  grid-area: left-grid;
+}
+
 footer {
   padding: 1rem 0;
   text-align: center;
   background-color: #1b1c1e;
+}
+
+@media only screen and (min-width: 1080px) {
+  .box {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .dark-font {
+    color: #fff;
+  }
+  .right-grid {
+    width: 50%;
+    height: 110vh;
+    float: right;
+  }
+  .left-grid {
+    width: 50%;
+    float: left;
+  }
+  .small-container-right-align {
+    width: 85%;
+    max-width: 650px;
+    float: right;
+  }
 }
 /*# sourceMappingURL=style.css.map */
