@@ -41,9 +41,6 @@
                         <h1>Let's Start shall we?</h1>
                     </div>
 
-
-
-
                 </div>
                 <div class="circle small  dark"> </div>
                 <div class="circle tiny  dark"> </div>
@@ -54,7 +51,7 @@
 
             </div>
         </section>
-        <section class="right-grid dark large-padding">
+        <section class="left-grid dark large-padding">
             <div class="container light-color small-container-right-align">
                 <div class="content-container">
                     <div class="standard-padding">
