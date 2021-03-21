@@ -99,7 +99,7 @@ nav .logo {
 .geometric-design {
   position: relative;
   overflow: hidden;
-  height: 910px;
+  height: 930px;
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -202,7 +202,7 @@ footer {
   .box {
     width: 50%;
     height: 100%;
-    max-height: 910px;
+    max-height: 930px;
     position: absolute;
     top: 0;
     z-index: -1;
@@ -217,7 +217,35 @@ footer {
   .left-grid {
     width: 50%;
     float: left;
-    height: 910px;
+    height: 930px;
+  }
+  .small-container-right-align {
+    width: 85%;
+    max-width: 650px;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .box {
+    width: 50%;
+    height: 100%;
+    max-height: 930px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .dark-font {
+    color: #fff;
+  }
+  .right-grid {
+    width: 50%;
+    float: right;
+  }
+  .left-grid {
+    width: 50%;
+    float: left;
+    height: 930px;
   }
   .small-container-right-align {
     width: 85%;

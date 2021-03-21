@@ -1,0 +1,54 @@
+@import "style.scss";
+
+nav {
+  background-color: $dark-color;
+  display: flex;
+  justify-content: space-between;
+  padding: $standard-padding;
+  .logo {
+    color: $light-color;
+    font-weight: $bold;
+  }
+}
+@media only screen and(min-width:1080px) {
+  .nav-link {
+    .btn {
+      border: 1px solid $dark-color;
+      color: $dark-color;
+    }
+  }
+  .small {
+    top: 35%;
+  }
+  .tiny {
+    top: 35%;
+  }
+  .box {
+    width: 50%;
+    height: 100%;
+    max-height: 930px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  nav {
+    color: $light-color;
+    background-color: transparent;
+  }
+  .right-grid {
+    width: 50%;
+    float: left;
+  }
+  .left-grid {
+    width: 50%;
+    float: right;
+    height: 930px;
+    color: $dark-color;
+    padding: 0 5rem;
+  }
+  .small-container-right-align {
+    width: 85%;
+    max-width: 650px;
+    float: right;
+  }
+}
