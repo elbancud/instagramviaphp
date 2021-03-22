@@ -1,6 +1,41 @@
 @import "style.scss";
+.sucess {
+  text-align: center;
+  color: #4bb543;
+}
+.fail {
+  text-align: center;
+  color: #fc100d;
+}
+.content-container {
+  .dark {
+    &:hover {
+      border: 1px solid $dark-color;
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
+}
 
-nav {
+.input-group {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #464646;
+    max-width: 450px;
+    color: $dark-color;
+    font-weight: 800;
+    &:focus {
+      outline: none;
+      caret-color: $light-color;
+    }
+  }
+}
+.left- nav {
   background-color: $dark-color;
   display: flex;
   justify-content: space-between;
@@ -15,6 +50,10 @@ nav {
     .btn {
       border: 1px solid $dark-color;
       color: $dark-color;
+      &:hover {
+        background-color: $dark-color;
+        color: $light-color;
+      }
     }
   }
   .small {

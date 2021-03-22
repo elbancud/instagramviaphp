@@ -12,75 +12,78 @@
 
 <body>
 
-    <header>
-        <nav>
-            <div class="container">
-                <div class="flex-content">
+    <form method="post">
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="flex-content">
 
-                    <div class="nav-link">
-                        <div class="logo ">
-                            <div class="light-font">Bulagtok</div>
+                        <div class="nav-link">
+                            <div class="logo ">
+                                <div class="light-font">Bulagtok</div>
+                            </div>
+                        </div>
+                        <div class="nav-link">
+                            <button class="btn light" name="signup" type="submit"> Signup</button>
+
                         </div>
                     </div>
-                    <div class="nav-link">
-                        <div class="btn light">
-                            Signup
+                </div>
+            </nav>
+            <div class="box dark"></div>
+        </header>
+        <main>
+            <section class="right-grid ">
+
+                <div class="geometric-design dark ">
+                    <div class="container small-container-right-align ">
+
+                        <div class="content-container light-font">
+                            <h1 class="">Glad you're back</h1>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="box dark"></div>
-    </header>
-    <main>
-        <section class="right-grid ">
 
-            <div class="geometric-design dark ">
-                <div class="container small-container-right-align ">
-                    <div class="content-container light-font">
-                        <h1 class="">Glad you're back</h1>
                     </div>
+                    <div class="circle small  light"> </div>
+                    <div class="circle tiny  light"> </div>
+                    <div class="circle large opacity10 light"></div>
+                    <div class="circle large opacity30 light"></div>
+                    <div class="circle large opacity50 light"></div>
+                    <div class="circle large opacity60 light"></div>
 
                 </div>
-                <div class="circle small  light"> </div>
-                <div class="circle tiny  light"> </div>
-                <div class="circle large opacity10 light"></div>
-                <div class="circle large opacity30 light"></div>
-                <div class="circle large opacity50 light"></div>
-                <div class="circle large opacity60 light"></div>
+            </section>
+            <section class="left-grid light large-padding dark-font">
+                <div class="container light-color ">
+                    <div class="content-container">
+                        <?php include 'loginValidation.php' ?>
+                        <div class="standard-padding">
+                            <h2> Login</h2>
+                        </div>
 
-            </div>
-        </section>
-        <section class="left-grid light large-padding dark-font">
-            <div class="container light-color ">
-                <div class="content-container">
-                    <div class="standard-padding">
-                        <h2> Login</h2>
+                        <div class="input-group">
+                            <label for="email">Username</label>
+                            <input type="text" name="username" id="username" autocomplete="off">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" autocomplete="off">
+                        </div>
+
+                        <div class="btn dark ">
+                            Login
+                        </div>
+
+
                     </div>
-
-                    <div class="input-group">
-                        <label for="email">Username</label>
-                        <input type="text" name="username" id="username" autocomplete="off">
-                    </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" autocomplete="off">
-                    </div>
-
-                    <div class="btn dark ">
-                        Login
-                    </div>
-
-
                 </div>
-            </div>
-        </section>
-    </main>
-    <!-- <footer>
+            </section>
+        </main>
+        <!-- <footer>
         <div class="container light-font">
             copyright@Tolentino,Esteban,Bancud-2021
         </div>
     </footer> -->
+    </form>
 </body>
 
 </html>

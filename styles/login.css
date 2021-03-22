@@ -24,6 +24,14 @@
   color: #181818;
 }
 
+.success {
+  color: #4bb543;
+}
+
+.fail {
+  color: #fc100d;
+}
+
 h1 {
   max-width: 450px;
   font: 800 72px/1 "Manrope", sans-serif;
@@ -54,6 +62,12 @@ nav {
 nav .logo {
   color: #fff;
   font-weight: 800;
+}
+
+nav .nav-link .dark:hover {
+  border: 1px solid #181818;
+  background-color: #fff;
+  color: #181818;
 }
 
 .btn {
@@ -94,6 +108,12 @@ nav .logo {
 .content-container {
   margin: 4rem 0;
   padding: 1rem;
+}
+
+.content-container .light:hover {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
 }
 
 .geometric-design {
@@ -226,35 +246,48 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .box {
-    width: 50%;
-    height: 100%;
-    max-height: 930px;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
-  .dark-font {
-    color: #fff;
-  }
-  .right-grid {
-    width: 50%;
-    float: right;
-  }
-  .left-grid {
-    width: 50%;
-    float: left;
-    height: 930px;
-  }
-  .small-container-right-align {
-    width: 85%;
-    max-width: 650px;
-    float: right;
-  }
+.sucess {
+  text-align: center;
+  color: #4bb543;
 }
 
-nav {
+.fail {
+  text-align: center;
+  color: #fc100d;
+}
+
+.content-container .dark:hover {
+  border: 1px solid #181818;
+  background-color: #fff;
+  color: #181818;
+}
+
+.input-group {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #464646;
+  max-width: 450px;
+  color: #181818;
+  font-weight: 800;
+}
+
+.input-group input:focus {
+  outline: none;
+  caret-color: #fff;
+}
+
+.left- nav {
   background-color: #181818;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +298,7 @@ nav {
   padding: 1rem 0;
 }
 
-nav .logo {
+.left- nav .logo {
   color: #fff;
   font-weight: 800;
 }
@@ -274,6 +307,10 @@ nav .logo {
   .nav-link .btn {
     border: 1px solid #181818;
     color: #181818;
+  }
+  .nav-link .btn:hover {
+    background-color: #181818;
+    color: #fff;
   }
   .small {
     top: 35%;
