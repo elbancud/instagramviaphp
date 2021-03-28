@@ -1,0 +1,202 @@
+body{
+	font-family: Manrope;
+	background-color: #fff;
+	margin: 15%;
+	margin-top: 50px;
+}
+
+
+/** NAVIGATION TEXT COLOR **/
+.navbar-nav li a{
+	color: #181818;
+	font-size: 16px;
+  font-weight: lighter;
+}
+
+
+/** NAVIGATION COLOR **/
+.navbar{
+	background-color: #fff;
+}
+
+/** NAVIGATION BRAND COLOR (Bulagtok)**/
+.navbar a{
+  font-weight: bold;
+	color: #181818;
+	font-size: 16px;
+}
+
+/** NAVIGATION CIRCLES **/
+
+.dot {
+  height: 40px;
+  width: 40px;
+  background-color: #181818;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+
+}
+
+
+/** NAVBAR CREATE PLUS SIGN **/
+.create{
+  background-color: #181818;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+
+}
+
+
+/** HIDE DROPDOWN ARROW SYMBOL **/
+.dropdown-toggle::after {
+    display: none;
+}
+
+/** DROPDOWN ITEM TITLE **/
+
+.dropdown .dropdown-menu h5{
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+
+/** DROPDOWN ITEMS TEXT COLOR **/
+.dropdown-menu .dropdown-item{
+	color: #181818;
+}
+
+
+/** IMAGES **/
+.profile img{
+	height: 40px;
+  width: 40px;
+}
+
+.dropdown img{
+	height: 40px;
+  width: 40px;
+  position: absolute;
+}
+
+
+/** POST & SETTINGS TEXT INSIDE DROPDOWN **/
+.post-text{
+	font-weight: lighter;
+	margin-left: 50px;
+	font-size: 16px;
+}
+/** TEXT = SHARE A POST ON NEWS FEED **/
+.post-text2{
+	margin-left: 50px;
+	font-size: 16px;
+	opacity: .8;
+}
+
+
+
+
+.modal-body a{
+	color: #181818;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/** SINGLE LINE INPUT TEXT **/
+.input-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #464646;
+  max-width: 900px;
+  color: #181818;
+}
+
+.input-group input:focus {
+  outline: none;
+  caret-color: #181818;
+}
+
+
+/** NAVBAR SETTINGS = DOWN ARROW SYMBOL **/
+
+.arrow {
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 5px;
+
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/** BODY **/
+/** BODY **/
+/** BODY **/
+
+.container{
+  margin-top: 100px;
+  font-size: 16px;
+}
+
+
+/** LEFT COLUMN **/
+/** LEFT COLUMN **/
+/** LEFT COLUMN **/
+
+.account-left img{
+  height: 40px;
+  width: 40px;
+  color: #fff;
+}
+
+.account-left{
+  background-color: #181818;
+  color: #fff;
+}
+
+.account-left p{
+  margin-left: 50px;
+  opacity: .7;
+}
+
+/** RIGHT COLUMN **/
+/** RIGHT COLUMN **/
+/** RIGHT COLUMN **/
+
+.right-column{
+  background-color: #f6f6f6;
+}
+
+.right-column-content{
+  margin-top: 30px;
+}
+
+
+.right-column-header{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.sub-header{
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.profile-undertext{
+  margin-top: -20px;
+  margin-bottom: 30px;
+  opacity: .7;
+}
+
+.navbar-toggler{
+  border-color: #181818;
+  font-size: 16px;
+}
