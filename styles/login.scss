@@ -28,10 +28,10 @@
     border-bottom: 1px solid #464646;
     max-width: 450px;
     color: $dark-color;
-    font-weight: 800;
+
     &:focus {
       outline: none;
-      caret-color: $light-color;
+      caret-color: $dark-color;
     }
   }
 }
@@ -41,13 +41,33 @@
   justify-content: space-between;
   padding: $standard-padding;
   .logo {
-    color: $light-color;
-    font-weight: $bold;
+    .light-font {
+      color: $dark-color;
+      font-weight: $bold;
+    }
   }
+}
+.nav-link {
+  .btn {
+    background-color: $light-color;
+    border: 1px solid $dark-color;
+    color: $dark-color;
+    &:hover {
+      background-color: transparent;
+
+      border: 1px solid $light-color;
+      color: $light-color;
+    }
+  }
+}
+nav {
+  background-color: $dark-color;
 }
 @media only screen and(min-width:1080px) {
   .nav-link {
     .btn {
+      background-color: transparent;
+
       border: 1px solid $dark-color;
       color: $dark-color;
       &:hover {

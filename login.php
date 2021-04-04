@@ -8,6 +8,9 @@
     <title>MyG's</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/loginScript.js"></script>
+
 </head>
 
 <body>
@@ -55,7 +58,11 @@
             <section class="left-grid light large-padding dark-font">
                 <div class="container light-color ">
                     <div class="content-container">
-                        <?php include 'loginValidation.php' ?>
+                        <h3 class="fail" id="fail"></h3>
+                        <h3 class="success" id="success"></h3>
+                        <?php
+                        include 'loginValidation.php';
+                        ?>
                         <div class="standard-padding">
                             <h2> Login</h2>
                         </div>
@@ -69,10 +76,7 @@
                             <input type="password" name="password" id="password" autocomplete="off">
                         </div>
 
-                        <div class="btn dark ">
-                            Login
-                        </div>
-
+                        <button class="btn dark" type="button" id="login" name="login">Login</button>
 
                     </div>
                 </div>

@@ -279,12 +279,11 @@ footer {
   border-bottom: 1px solid #464646;
   max-width: 450px;
   color: #181818;
-  font-weight: 800;
 }
 
 .input-group input:focus {
   outline: none;
-  caret-color: #fff;
+  caret-color: #181818;
 }
 
 .left- nav {
@@ -298,13 +297,30 @@ footer {
   padding: 1rem 0;
 }
 
-.left- nav .logo {
-  color: #fff;
+.left- nav .logo .light-font {
+  color: #181818;
   font-weight: 800;
+}
+
+.nav-link .btn {
+  background-color: #fff;
+  border: 1px solid #181818;
+  color: #181818;
+}
+
+.nav-link .btn:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+nav {
+  background-color: #181818;
 }
 
 @media only screen and (min-width: 1080px) {
   .nav-link .btn {
+    background-color: transparent;
     border: 1px solid #181818;
     color: #181818;
   }

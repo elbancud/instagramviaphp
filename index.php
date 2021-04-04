@@ -8,12 +8,17 @@
     <title>MyG's</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
 
 </head>
 
 <body>
-    <form action="" method="get" id="regForm">
+    <div style="display: none;">
+        <?php include 'inputValidation.php' ?>
+
+    </div>
+    <form action="" method="POST" id="regForm">
         <header>
             <nav>
                 <div class="container">
@@ -89,7 +94,7 @@
                             <label for="confirmPassword">Confirm Password</label>
                             <input type="password" id="passwordConfirmation" autocomplete="off" name="passwordConfirmation">
                         </div>
-                        <button class="btn light " name="submit" id="submit" type="submit">
+                        <button class="btn light " name="button" id="submit" type="button">
                             Submit
                         </button>
 
@@ -97,14 +102,13 @@
                 </div>
             </section>
         </main>
-        <?php include 'inputValidation.php' ?>
+
         <!-- <footer>
         <div class="container light-font">
             copyright@Tolentino,Esteban,Bancud-2021
         </div>
     </footer> -->
     </form>
-    <script src="script.js"></script>
 </body>
 
 </html>

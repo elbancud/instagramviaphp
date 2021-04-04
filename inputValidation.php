@@ -1,32 +1,43 @@
 <?php
+include 'db.php';
 
-// if (
-//     $_POST['firstName'] == '' || $_POST['middleName'] == '' || $_POST['lastName'] == '' || $_POST['email'] == '' ||
-//     $_POST['username'] == '' || $_POST['password'] == '' || $_POST['confirmPassword'] == ''
-// ) {
-//     print("<h3 class=\"fail\">Please complete the fields</h3>");
-// } elseif ($_POST['password'] != $_POST['confirmPassword']) {
-//     print("<h3 class=\"fail\">Password does not match</h3>");
-// } else {
+$firstName = isset($_POST['firstName']) ? $_POST['firstName'] : '';
+$middleName = isset($_POST['middleName']) ? $_POST['middleName'] : '';
+$lastName = isset($_POST['lastName']) ? $_POST['lastName'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$username = isset($_POST['username']) ? $_POST['username'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
+$passwordConfirmation = isset($_POST['passwordConfirmation']) ? $_POST['passwordConfirmation'] : '';
 
-// $middleName = $_POST['middleName'] || '';
-// $lastName = $_POST['lastName'] || '';
-// $email = $_POST['email'] || '';
-// $username = $_POST['username'] || '';
-// $password = $_POST['password'] || '';
-// if (isset($_POST['firstName'])) {
-//     print("hello" . $_POST['firstName']);
-// } else {
-//     print("wala");
-// }
-//     print($firstName); 
-// }
-    // header("location: http://localhost/php%20project/login.php");
-    // exit();
 
-// }
 
-// if (isset($_POST['login'])) {
-//     header("location: http://localhost/php%20project/login.php");
-//     exit();
-// }
+$sql = "SELECT * FROM iguserprofile WHERE username='$username'";
+$result = mysqli_query($conn, $sql);
+
+
+if (mysqli_num_rows($result) > 0) {
+    print("error:username");
+} else if ($password != $passwordConfirmation) {
+    print("error:password");
+} elseif ($firstName == "" || $middleName == "" || $lastName == "" || $email == "" || $username == "" || $password == "" || $passwordConfirmation == "") {
+    print("error:password");
+} else {
+
+    $sql = "INSERT INTO iguserprofile (firstName,middleName, lastName, username, email, password, profilePicture)
+                    VALUES ('$firstName','$middleName', '$lastName','$username','$email', '$password', '')";
+    if ($conn->query($sql) === TRUE) {
+        print("Success");
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    header("Location: http://localhost/php%20project/login.php");
+    exit();
+}
+
+
+
+
+if (isset($_POST['login'])) {
+    header("location: http://localhost/php%20project/login.php");
+    exit();
+}

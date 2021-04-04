@@ -6,6 +6,13 @@ body {
   margin-top: 50px;
   transition: all 0.4s;
 }
+ul {
+  display: flex;
+  position: relative;
+}
+li {
+  margin: 0 0.3rem;
+}
 main {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -83,7 +90,7 @@ main {
   width: 100%;
 }
 .box {
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem auto;
@@ -116,7 +123,14 @@ main {
   overflow: hidden;
   width: 0;
 }
-
+.radius {
+  border-radius: 50%;
+  margin: 0 0.2rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
 [type="file"] + label {
   background: #f15d22;
   border: none;
@@ -143,7 +157,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s;
 }
 .btn-1:hover {
   background-color: #1f1f1f;
@@ -154,12 +167,23 @@ main {
 .paddingShort {
   padding: 1rem;
 }
-/** NAVIGATION TEXT COLOR **/
-.navbar-nav li a {
-  color: #fff;
-  font-size: 16px;
-  font-weight: lighter;
+.d-flex {
+  align-items: center;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+/** NAVIGATION TEXT COLOR **/
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+}
+
 .padding {
   padding: 2rem 1rem;
 }
@@ -175,6 +199,10 @@ main {
   font-weight: bold;
   color: #fff;
   font-size: 16px;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
 }
 
 /** NAVIGATION CIRCLES **/
@@ -214,22 +242,53 @@ h5 {
 }
 
 /** DROPDOWN ITEMS TEXT COLOR **/
-.dropdown-menu .dropdown-item {
-  color: #181818;
+.dropdown-item {
+  color: #000;
 }
-
+.dropdown-menu-absolute {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 1;
+  left: -14.3rem;
+  display: none;
+  color: #181818;
+  box-shadow: 0px 7px 20px -6px rgba(0, 0, 0, 0.67);
+}
+.btn {
+  margin: 0 0.25rem;
+}
 /** IMAGES **/
 .profile {
-  margin-right: 2rem;
   display: flex;
   align-items: center;
   color: #fff;
   font: 800 16px/1 "Manrope", sans-serif;
+  padding: 0.25rem 0;
+  width: 140px;
 }
-.profile img {
-  height: 40px;
+.profile:hover {
+  background-color: rgba(182, 182, 182, 0.144);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.profileCircle {
+  border-radius: 50%;
   width: 40px;
+  height: 40px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   margin: 0 1rem;
+}
+
+.profile img {
+  height: 60px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .dropdown img {
@@ -242,6 +301,7 @@ h5 {
 /** POST & SETTINGS TEXT INSIDE DROPDOWN **/
 .post-text {
   font: 800 16px/1 "Manrope", sans-serif;
+  color: #181818;
 
   margin-left: 50px;
 }
@@ -249,6 +309,7 @@ h5 {
 .post-text2 {
   margin-left: 50px;
   font: 400 13px/1 "Manrope", sans-serif;
+  color: #181818;
 }
 
 .modal-body a {
