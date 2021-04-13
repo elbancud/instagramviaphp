@@ -1,14 +1,13 @@
-const fileProfileUpload = document.getElementById("fileProfileUpload");
-const uploadProfile = document.getElementById("uploadProfile");
+const fileUpload2 = document.getElementById("fileUpload2");
 
 
 
-uploadProfile.addEventListener("click", (event) => {
+fileUpload2.addEventListener("click", (event) => {
     
-    if (fileProfileUpload.files[0] == undefined) {
+    if (fileUpload2.files[0] == undefined) {
         alert("Please choose a file");
         event.preventDefault();
-    } else if (fileProfileUpload.files[0].size > 500000) {
+    } else if (fileUpload2.files[0].size > 500000) {
         alert("Image should be maximum of 5mb ");
         event.preventDefault();
        

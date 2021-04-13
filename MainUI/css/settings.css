@@ -33,6 +33,23 @@ main {
   height: 50px;
   object-fit: contain;
 }
+.profileCircle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(38, 54, 197);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 1rem;
+}
+
+.profileCircle img {
+  height: 60px;
+  width: 100%;
+  object-fit: contain;
+}
 .box-small {
   display: flex;
   width: 100%;
@@ -90,6 +107,7 @@ main {
 .profile {
   width: 100%;
 }
+
 .box {
   width: 90%;
   border-radius: 10px;
@@ -176,7 +194,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #1b1c1e;
 }
 /** NAVIGATION TEXT COLOR **/
 a {
@@ -290,7 +308,7 @@ h5 {
   margin-right: 2rem;
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #1b1c1e;
   font: 800 16px/1 "Manrope", sans-serif;
 }
 .profile img {

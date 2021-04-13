@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../upload.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,62 +27,24 @@ session_start();
     <div class="container">
       <nav class="d-flex">
         <div>
-          <a href="index.php">BULAGTOK</a>
+          <a href="../MainUI/index.php">
+            < Home</a>
         </div>
         <div class="d-flex">
           <div>
-            <li class="nav-item profile">
-              <a class="nav-link" href="#"><img src="img/profile.png"><?php print($_SESSION['firstName']) ?> </a>
-
+            <li class="nav-item profile" data-bs-toggle="modal" data-bs-target="#upload">
+              <div class="profileCircle">
+                <img src="<?php print($profileImg); ?>">
+              </div>
+              <?php print($_SESSION['firstName']) ?>
             </li>
           </div>
-          <div class="dropdown me-1">
-            <button type="button" class="btn radius btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-              </svg>
-            </button>
-            <ul class="dropdown-menu padding animate__animated animate__fadeIn " aria-labelledby=" dropdownMenuOffset">
-              <h5> Create</h5>
-              <li><a class="dropdown-item" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#postModal">
-                  <img src="img/post-icon.png">
-                  <span class="post-text">Post</span><br>
-                  <span class="post-text2">Share a post on News Feed.</span></a>
-              </li>
-              <li><a class="dropdown-item" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#">
-                  <img src="img/myday-icon.png">
-                  <span class="post-text">Story</span><br>
-                  <span class="post-text2">Share a photo or write something.</span> </a></li>
-            </ul>
-          </div>
-          <div class="dropdown me-1">
-            <button type="button" class="btn radius btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-              </svg>
-            </button>
-            <ul class="dropdown-menu padding animate__animated animate__fadeIn " aria-labelledby="dropdownMenuOffset">
-              <h5> Settings</h5>
 
-              <li>
-                <a href="settings.php" class="dropdown-item" type="button" class="btn btn-secondary">
-                  <img src="img/settings-icon.png">
-                  <span class="post-text">Security</span><br>
-                  <span class="post-text2">Reset your security shit.</span>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <img src="img/logout-icon.png">
-                  <span class="post-text">Logout</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
 
 
 
       </nav>
+
       <div class="input-forms padding">
         <div class="title">
           <h4>General Account Settings</h4>

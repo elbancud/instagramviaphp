@@ -16,8 +16,35 @@ if (isset($_POST['post'])) {
 
             $caption = $_POST["caption"];
             //insert in unique db
+            $type = "post";
 
-            $sql = "INSERT INTO $username (caption,imageUrl) VALUES ('$caption','$newImgName')";
+            $sql = "INSERT INTO $username (caption,imageUrl,type) VALUES ('$caption','$newImgName','$type')";
+
+            if (mysqli_query($conn, $sql)) {
+                print("<script> alert('File uploaded successfully'); </script>");
+                print('<script type="text/javascript"> parent.window.location.reload(true);</script>');
+            }
+        }
+    }
+}
+
+//myday upload
+
+if (isset($_POST['mydayPost'])) {
+
+    if (isset($_FILES['mydayFile'])) {
+
+
+        $newImgName = uniqid("IMG", true) . $_FILES['mydayFile']['name'];
+        $dir = 'assets\myday/' . $newImgName;
+
+        if (move_uploaded_file($_FILES['mydayFile']['tmp_name'], $dir)) {
+
+            $caption = "";
+            //insert in unique db
+            $type = "myday";
+
+            $sql = "INSERT INTO $username (caption,imageUrl,type) VALUES ('$caption','$newImgName','$type')";
 
             if (mysqli_query($conn, $sql)) {
                 print("<script> alert('File uploaded successfully'); </script>");

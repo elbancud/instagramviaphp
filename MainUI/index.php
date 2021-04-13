@@ -14,8 +14,12 @@ include '../upload.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <title>MAIN UI</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </head>
 
 <body id="body">
@@ -49,7 +53,7 @@ include '../upload.php';
                   <span class="post-text">Post</span><br>
                   <span class="post-text2">Share a post on News Feed.</span></a>
               </li>
-              <li><a class="dropdown-item" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#">
+              <li><a class="dropdown-item" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#mydayModal">
                   <img src="img/myday-icon.png">
                   <span class="post-text">Story</span><br>
                   <span class="post-text2">Share a photo or write something.</span> </a></li>
@@ -70,7 +74,7 @@ include '../upload.php';
                   <span class="post-text">Security</span><br>
                   <span class="post-text2">Reset your security shit.</span>
               </li>
-              <li type="submit" name="logout">
+              <li type="button" name="logout">
                 <a class="dropdown-item" href="#">
                   <img src="img/logout-icon.png">
                   <span class="post-text">Logout</span>
@@ -111,12 +115,10 @@ include '../upload.php';
 
             <div class=" uploadFile">
 
-              <label for="fileUpload" class="btn-1">Drag or choose your file here</label>
-              <!-- <input type="file" class="" id="fileUpload" name="file" accept="image/*" onchange="document.getElementById('uploadTitle').innerHTML = this.files[0].name; "> -->
+              <label for="fileUpload1" class="btn-1">Drag or choose your file here</label>
+              <input type="file" class="" id="fileUpload1" name="file" accept="image/*" onchange="document.getElementById('uploadTitle').innerHTML = this.files[0].name; ">
 
-              <!-- <div class="picture_uploaded">
-              <img src="" id="imgUpload" alt="" class="imgUpload">
-            </div> -->
+
             </div>
             <div class="modal-footer">
               <button type="submit" name="post" id="post" class="btn btn-primary">Post</button>
@@ -125,6 +127,41 @@ include '../upload.php';
 
         </div>
       </div>
+
+      <!-- mydayprofile -->
+      <div class="modal fade" id="mydayModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+
+
+          <div class="modal-content padding-short">
+            <div class="modal-header ">
+              <h5 class="modal-title text-align-center">Post a myday</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+
+            <!-- MODAL BODY-->
+
+            <div class="uploadFile">
+              <h5 id="uploadTitleMyday" style="margin: 0;"></h5>
+            </div>
+
+            <div class=" uploadFile">
+
+              <label for="fileUpload2" class="btn-1">Drag or choose your file here</label>
+              <input type="file" class="" id="fileUpload2" name="mydayFile" accept="image/*" onchange="document.getElementById('uploadTitleMyday').innerHTML = this.files[0].name; ">
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" name="mydayPost" id="post" class="btn btn-primary">Post</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- modal for profile upload -->
       <div class="modal fade" id="upload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
 
@@ -144,7 +181,7 @@ include '../upload.php';
             <div class=" uploadFile">
 
               <label for="fileProfileUpload" class="btn-1">Choose your file here</label>
-              <input type="file" id="fileProfileUpload" name="profilePictureFile" accept="image/*">
+              <input type="file" id="fileProfileUpload" name="profilePictureFile" accept="image/*" onchange="document.getElementById('uploadTitleProfile').innerHTML = this.files[0].name; ">
 
               <!-- <div class="picture_uploaded">
               <img src="" id="imgUpload" alt="" class="imgUpload">
@@ -160,37 +197,27 @@ include '../upload.php';
       <main>
 
         <div class="container">
-          <div class="box-small">
-            <div class="box-my-day">
-              <div class="header">
-                <div class="profile">
-                  <div class="logo">
-                  </div>
-                  <div class="name">
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="box-my-day">
-
-            </div>
-            <div class="box-my-day">
-
-            </div>
+          <div class="carousel" data-flickity='{ "cellAlign": "left","groupCells": true }'>
+            <?php include '../MainUI/mydayUpload.php' ?>
           </div>
-        </div>
-      </main>
-      <main>
-        <div class="container">
-          <?php include '../MainUI/divUpload.php' ?>
 
-      </main>
+        </div>
+
+
+    </div>
+    </main>
+    <main>
+      <div class="container">
+        <?php include '../MainUI/divUpload.php' ?>
+
+    </main>
 
 
     </div>
   </form>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="../scripts/upload.js"></script>

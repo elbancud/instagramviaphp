@@ -5,7 +5,7 @@ include '../db.php';
 
 $username = $_SESSION['username'];
 
-$sql = "SELECT caption, imageUrl FROM $username";
+$sql = "SELECT caption, imageUrl FROM $username WHERE type = 'post'";
 $result = mysqli_query($conn, $sql);
 $dbArray = array();
 
@@ -20,6 +20,8 @@ if (mysqli_num_rows($result) > 0) {
         array_push($dbArray, $columnElements);
     }
 }
+
+
 for ($outer = sizeof($dbArray) - 1; $outer >= 0; $outer--) {
 
     print('<div class="box animate__animated animate__headShake">');

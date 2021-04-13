@@ -29,7 +29,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $sql = "CREATE TABLE $usernameSession (
                     id INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                     caption VARCHAR(255) NOT NULL,
-                    imageUrl VARCHAR(255) NOT NULL
+                    imageUrl VARCHAR(255) NOT NULL,
+                    type VARCHAR(255) NOT NULL
             )";
             if ($conn->query($sql) === TRUE) {
             } else {
