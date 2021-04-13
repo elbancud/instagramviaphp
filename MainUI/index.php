@@ -69,17 +69,20 @@ include '../upload.php';
               <h5> Settings</h5>
 
               <li>
-                <a href="settings.php" class="dropdown-item" type="button" class="btn btn-secondary">
+                <a href="settings.php" class="dropdown-item">
                   <img src="img/settings-icon.png">
                   <span class="post-text">Security</span><br>
-                  <span class="post-text2">Reset your security shit.</span>
+                  <span class="post-text2">Reset your security.</span>
               </li>
-              <li type="button" name="logout">
-                <a class="dropdown-item" href="#">
-                  <img src="img/logout-icon.png">
+
+              <a href="#" class="dropdown-item">
+                <button class="btn dropdown-item" type="submit" name="logout" onclick="window.location.href='http://localhost/php%20project/login.php'; ">
+
+                  <img src=" img/logout-icon.png">
                   <span class="post-text">Logout</span>
-                </a>
-              </li>
+
+                </button>
+              </a>
             </ul>
           </div>
         </div>

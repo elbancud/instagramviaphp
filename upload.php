@@ -90,3 +90,8 @@ if (isset($_POST['postProfilePicture'])) {
     } else {
     }
 }
+
+if (isset($_POST['logout'])) {
+
+    session_destroy();
+}

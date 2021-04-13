@@ -252,6 +252,10 @@ h5 {
 }
 
 /** DROPDOWN ITEMS TEXT COLOR **/
+.contain {
+  width: 100%;
+  position: absolute;
+}
 .dropdown-item {
   color: #000;
 }
